@@ -19,6 +19,5 @@ def test_first_scenario(driver):
     home_page_tesor.switch_to_window()
     home_page_tesor.check_box()
     home_page_tesor.click_about_company()
-    about_page_tensor.move_to_block()
     about_page_tensor.check_img()
 

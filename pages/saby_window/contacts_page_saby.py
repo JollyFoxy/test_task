@@ -28,6 +28,7 @@ class ContactsPageSaby:
 
     @allure.step('Изменение региона')
     def change_region(self):
+        """Не смог найти элемент по которому можно кликнуть"""
         #region = Div(xpath="//span[@class='sbis_ru-Region-Chooser ml-16 ml-xm-0']/div",driver=self.driver)
         kamchatka = Li(xpath='//*[@id="popup"]/div[2]/div/div/div/div/div[2]/div/ul/li[43]',
                        driver=self.driver)

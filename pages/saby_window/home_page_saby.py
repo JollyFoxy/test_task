@@ -1,5 +1,6 @@
 import allure
 from selenium.webdriver.chrome.webdriver import WebDriver
+from selenium.webdriver import ActionChains
 from elements.div import Div
 from elements.a import A
 
@@ -21,6 +22,12 @@ class HomePageSaby:
     def click_on_contacts_regions(self):
         contacts = A(xpath='//a[@href="/contacts"]', driver= self.driver)
         contacts.click_to_a()
+
+    @allure.step('Переход на страницу')
+    def click_on_download(self):
+        download_link = A(xpath='//a[@href="/download"]', driver= self.driver)
+        ActionChains(self.driver).scroll_to_element(download_link.get_element()).perform()
+        download_link.click_to_a()
 
 
 

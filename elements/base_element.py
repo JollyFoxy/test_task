@@ -17,6 +17,10 @@ class BaseElement:
         value = self._element.get_attribute('value')
         return value
 
+    def get_attribute(self, attributee: str):
+        value = self._element.get_attribute(attributee)
+        return value
+
     def is_visible(self) -> bool:
         if self._element.is_displayed():
             return True
